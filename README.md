@@ -16,6 +16,7 @@ composer install
 php artisan migrate
 
 //Crear Roles y Permisos
+
 php artisan db:seed --class=RolesAndPermissionsSeeder
 
 php artisan serve
@@ -23,5 +24,7 @@ php artisan serve
 ## Roles y Permisos
 
 -Para cambiar el nombre de los roles está en la tabla roles
+
 -los roles y permisos están en la tabla roles_has_permissions
+
 -Para cambiar el rol a un usuario se lo cambia en la tabla de model_has_roles en la columna role_id
