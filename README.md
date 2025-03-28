@@ -13,6 +13,7 @@ Usando laravel 10
 
 ## install
 composer install
+
 php artisan migrate
 
 //Crear Roles y Permisos
