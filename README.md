@@ -14,7 +14,10 @@ Usando laravel 10
 ## install
 composer install
 
-php artisan migrate --seed
+Si usas el siguiente comando ignora los demás comandos para ejecutar los roles y usuarios
+
+php artisan migrate --seed 
+
 
 //Crear Roles y Permisos
 
