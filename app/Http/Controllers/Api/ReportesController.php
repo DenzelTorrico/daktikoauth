@@ -11,4 +11,8 @@ class ReportesController extends Controller
         //lógica para el reporte
         return response()->json(['message' => 'Envio de Reporte']);
     }
+    public function excel(){
+        //lógica para el excel
+        return response()->json(['message' => 'Envio de Excel']);
+    }
 }

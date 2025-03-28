@@ -18,8 +18,9 @@ class RolesAndPermissionsSeeder extends Seeder
          // Crear roles
          $admin = Role::create(['name' => 'admin']);
          $adminPremium = Role::create(['name' => 'adminPremium']);
+         $adminBasico = Role::create(['name' => 'adminBasico']);        
          $estudiante = Role::create(['name' => 'estudiante']);
- 
+        
          // Crear permisos
          Permission::create(['name' => 'crear-usuarios']);
          Permission::create(['name' => 'eliminar-usuarios']);
@@ -28,5 +29,7 @@ class RolesAndPermissionsSeeder extends Seeder
          // Asignar permisos a los roles
          $admin->givePermissionTo(['crear-usuarios']);
          $adminPremium->givePermissionTo(['crear-usuarios', 'eliminar-usuarios', 'ver-reportes']);
+         $adminBasico->givePermissionTo(['crear-usuarios', 'ver-reportes']);
+         $estudiante->givePermissionTo(['ver-reportes']);    
     }
 }

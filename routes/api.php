@@ -32,8 +32,13 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     Route::middleware(['role_json:adminPremium'])->group(function () {
-        Route::get('/adminPremium', [ReportesController::class, 'reporte']);
+        Route::get('/reporte', [ReportesController::class, 'reporte']);
     });
+
+    Route::middleware(['role_json:adminBasico'])->group(function () {
+        Route::get('/excel', [ReportesController::class, 'excel']);
+    });
+
     Route::middleware(['role_json:estudiante'])->group(function () {
         Route::get('/estudiante', [EstudianteController::class, 'index']);
     });
