@@ -29,3 +29,29 @@ php artisan serve
 -los roles y permisos están en la tabla roles_has_permissions
 
 -Para cambiar el rol a un usuario se lo cambia en la tabla de model_has_roles en la columna role_id
+
+## Crear usuarios 
+
+php artisan db:seed --class=UserSeeder
+
+
+                'name' => 'Admin Principal',
+                'email' => 'admin@example.com',
+                'password' => Hash::make('password'),
+                'role' => 'admin',
+          
+                'name' => 'Admin Básico',
+                'email' => 'admin.basico@example.com',
+                'password' => Hash::make('password'),
+                'role' => 'adminBasico',
+            
+                'name' => 'Admin Premium',
+                'email' => 'admin.premium@example.com',
+                'password' => Hash::make('password'),
+                'role' => 'adminPremium',
+           
+                'name' => 'Estudiante',
+                'email' => 'estudiante@example.com',
+                'password' => Hash::make('password'),
+                'role' => 'estudiante',
+  
